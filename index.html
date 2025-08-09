@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RSVP — Simple Form</title>
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      line-height: 1.4;
+      --maroon: #5B0000;
+      --bgcolor: #f9f6f0;
+    }
+    body {
+      max-width: 900px;
+      margin: 28px auto;
+      padding: 18px;
+      background: var(--bgcolor);
+      border-radius: 8px;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
+      color: var(--maroon);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      color: var(--maroon);
+      text-align: center;
+    }
+    p.lead {
+      color: var(--maroon);
+      margin-top: 4px;
+      text-align: center;
+    }
+    .form-row {
+      margin: 12px 0;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--maroon);
+    }
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+      font-family: inherit;
+      color: var(--maroon);
+      background: #fff;
+    }
+    textarea {
+      min-height: 64px;
+      resize: vertical;
+    }
+    .controls {
+      display: flex;
+      justify-content: center;
+      margin-top: 8px;
+    }
+    button {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 0;
+      background: var(--maroon);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 14px;
+    }
+    button:hover {
+      background: #450000;
+    }
+    .note {
+      color: #666;
+      font-size: 13px;
+      margin-top: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>RSVP to our Wedding!</h1>
+  <p class="lead">We’re excited to celebrate with you! Please RSVP with the names of your family members attending and how many will be joining.</p>
+
+  <form id="rsvpForm" method="POST" action="https://getform.io/f/bvrmelyb" autocomplete="off" novalidate>
+    <!-- Redirect to thank you page after submit -->
+    <input type="hidden" name="_redirect" value="https://6897bae2ccd0322ef5465a7e--papaya-eclair-0a212e.netlify.app/thankyou.html" />
+
+    <div class="form-row">
+      <label for="names">Name(s)</label>
+      <textarea id="names" name="names" placeholder="Write down your name and your family member's names!"></textarea>
+    </div>
+
+    <div class="form-row">
+      <label for="count">How many of you?</label>
+      <input type="number" id="count" name="count" min="0" placeholder="0" />
+    </div>
+
+    <div class="form-row">
+      <label for="note">I'll Dance If You Play This Song:</label>
+      <textarea id="note" name="note" placeholder="Tell us your favorite wedding song"></textarea>
+    </div>
+
+    <div class="controls">
+      <button type="submit" id="submitBtn">Submit</button>
+    </div>
+  </form>
+
+  
+
+</body>
+</html>
